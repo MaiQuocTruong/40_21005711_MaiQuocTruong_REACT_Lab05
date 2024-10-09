@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         padding: 10,
         flex: 0.25,
+        marginTop: '10%',
     },
     imageStyle: {
         height: 140,

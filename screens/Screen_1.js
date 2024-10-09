@@ -1,23 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import {
     Image,
     StyleSheet,
     Text,
     View,
     TouchableOpacity,
-} from 'react-native'
+} from 'react-native';
 import mobile1 from '../assets/mobile1.png';
 import mobile2 from '../assets/mobile2.png';
 import mobile3 from '../assets/mobile3.png';
 import mobile4 from '../assets/mobile4.png';
 
 const ScreenOne = (props) => {
-    const { navigation, route } = props
-    const { navigate } = navigation
+    const { navigation, route } = props;
+    const { navigate } = navigation;
 
-    const colorRef = route.params ? route.params.color || 'blue' : 'blue'
+    const colorRef = route.params ? route.params.color || 'blue' : 'blue';
 
-    const [stars] = useState([1, 2, 3, 4, 5])
+    const [stars] = useState([1, 2, 3, 4, 5]);
 
     return (
         <View style={styles.container}>
@@ -77,17 +77,19 @@ const ScreenOne = (props) => {
                 </View>
             </View>
         </View>
-    )
+    );
 }
 
-export default ScreenOne
+export default ScreenOne;
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        justifyContent: 'center', // Center the content vertically
     },
     imageContainer: {
-        flex: 0.63,
+        flex: 0.6, // Adjusted to give more space to the content
+        marginTop: '30%',
     },
     imageStyle: {
         flex: 1,
@@ -96,6 +98,7 @@ const styles = StyleSheet.create({
     contentContainer: {
         flex: 1,
         paddingHorizontal: 20,
+        marginTop: 20, // Add margin to push content down
     },
     productTitle: {
         fontSize: 15,
@@ -187,4 +190,4 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontWeight: '700',
     },
-})
+});
